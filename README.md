@@ -14,7 +14,7 @@ Can be divided them in:
 
 ### Builder
 
-This is a design patterns that helps us to create complex objects, step by step. So we don't need to use complex
+This is a design pattern that helps us to create complex objects, step by step. So we don't need to use complex
 class constructors, or generate a new one for our specific needs. 
 
 Let's see the example shown bellow:
@@ -70,8 +70,9 @@ public class Person {
 }
 
 ```
-It shows us, how to create a builder for the class person. As we can see, it's quite simple, we can create a 
-static class, that's going to contain all the fields as methods. So we can use while performing the creation of an object. 
+It shows us, how to create a builder for the class person. It's quite simple, we create a 
+static class, that's going to contain all the fields as methods, so they can be used while performing the creation of 
+an object for Person class. 
 
 To use this builder, we can do like this: 
 
