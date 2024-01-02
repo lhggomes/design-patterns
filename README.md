@@ -89,7 +89,8 @@ public static void main(String[] args) {
 
     }
 ```
-### Factory
+### Factory Method
+
 
 
 ### References
