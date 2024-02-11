@@ -27,5 +27,6 @@ bin/
 
 ../out/
 
+.idea/
 ### Mac OS ###
 .DS_Store
