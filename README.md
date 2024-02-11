@@ -159,10 +159,21 @@ public class Main {
 }
 
 ```
-### Singletown
+### Singleton
 
-One class must have a single object, and he needs to be shared with the other application modules. Database connection is 
-a great example of it. 
+This pattern lets you ensure that a class has only one instance. So it provides a global access point 
+to this instance created. We generally use this pattern while working with Databases, or log classes. 
+
+We can create a singleton class, by two ways:
+    
+1. Eager Initialization
+2. Lazy Initialization
+
+
+#### Eager Initialization
+
+First of all, we must create our class, that we want to make it singleton. 
+
 
 ### References
 [Refactoring Guru](https://refactoring.guru/)
