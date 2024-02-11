@@ -161,6 +161,9 @@ public class Main {
 ```
 ### Singletown
 
+One class must have a single object, and he needs to be shared with the other application modules. Database connection is 
+a great example of it. 
+
 ### References
 [Refactoring Guru](https://refactoring.guru/)
 
