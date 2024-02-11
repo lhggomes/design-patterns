@@ -17,7 +17,5 @@ public class Main {
         Currency brazilianReal = CurrencyFactory.newCurrency(Country.BRAZIL);
         System.out.println(brazilianReal.getSymbol());
         assert brazilianReal.getSymbol().equalsIgnoreCase("R$");
-
-
     }
 }

@@ -91,7 +91,75 @@ public static void main(String[] args) {
 ```
 ### Factory Method
 
+Factory is a design pattern that provide us an interface for creating objects in a superclass, but at the sametime, allow
+subclasses to alter the type of objects that will be created.
 
+Let's see the example shown bellow:
+
+Create a currency interface
+```
+public interface Currency {
+    String getSymbol();
+}
+
+```
+
+Now, create one class for each currency
+```
+public class Real implements Currency {
+    
+    @Override
+    public String getSymbol() {
+        return "R$";
+    }
+}
+public class UsaDollar implements Currency {
+    @Override
+    public String getSymbol() {
+        return "USD";
+    }
+}
+```
+To implement the factory method, we must create a Factory class, that will receive the needed parameter, and generates
+the specific class with the needed methods. 
+
+```
+public class CurrencyFactory {
+
+    public static Currency newCurrency(Country country) throws IllegalArgumentException{
+        switch (country){
+            case USA -> {
+                return new UsaDollar();
+            }
+            case BRAZIL -> {
+                return new Real();
+            }
+            default -> throw new IllegalArgumentException("No Currency found for this country " + country);
+        }
+    }
+}
+```
+So, to use, we can procedded like this: 
+
+```
+public class Main {
+
+    public static void main(String[] args){
+
+        System.out.println("Performing the creation of USA Currency");
+        Currency usdDollar = CurrencyFactory.newCurrency(Country.USA);
+        System.out.println(usdDollar.getSymbol());
+        assert usdDollar.getSymbol().equalsIgnoreCase("USD");
+
+        System.out.println("Performing the creation of Real Currency");
+        Currency brazilianReal = CurrencyFactory.newCurrency(Country.BRAZIL);
+        System.out.println(brazilianReal.getSymbol());
+        assert brazilianReal.getSymbol().equalsIgnoreCase("R$");
+    }
+}
+
+```
+### Singletown
 
 ### References
 [Refactoring Guru](https://refactoring.guru/)
