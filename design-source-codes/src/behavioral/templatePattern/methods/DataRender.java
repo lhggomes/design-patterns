@@ -1,4 +1,4 @@
-package behavioral.templatePattern;
+package behavioral.templatePattern.methods;
 
 public abstract class DataRender {
 

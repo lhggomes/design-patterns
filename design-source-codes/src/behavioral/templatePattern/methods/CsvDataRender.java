@@ -1,10 +1,10 @@
-package behavioral.templatePattern;
+package behavioral.templatePattern.methods;
 
-public class XMLDataRender extends DataRender {
+public class CsvDataRender extends DataRender {
 
     @Override
     public String readData() {
-        return "XML Data";
+        return "CSV Data";
     }
 
     @Override

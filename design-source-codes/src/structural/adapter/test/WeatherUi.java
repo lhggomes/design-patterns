@@ -1,4 +1,6 @@
-package structural.adapter;
+package structural.adapter.test;
+
+import structural.adapter.methods.WeatherAdapter;
 
 public class WeatherUi {
 

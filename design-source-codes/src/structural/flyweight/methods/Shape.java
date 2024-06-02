@@ -1,4 +1,4 @@
-package structural.flyweight;
+package structural.flyweight.methods;
 
 public abstract class Shape {
     public void draw(int radius, String fillColor, String lineColor){
